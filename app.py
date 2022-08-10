@@ -50,4 +50,9 @@ df.columns = ['번호', '영화명', '평점', '리뷰', '아이디', '작성일
 
 st.title('네이버 영화평')
 st.dataframe(df)
-st.table(df)
+# st.table(df)
+
+df['평점'] = df['평점'].astype('int')
+dfg = df.groupby('영화명').mean()
+
+st.bar_chart(dfg)
