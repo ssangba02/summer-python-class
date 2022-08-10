@@ -55,4 +55,4 @@ st.dataframe(df)
 df['평점'] = df['평점'].astype('int')
 dfg = df.groupby('영화명').mean()
 
-st.bar_chart(dfg)
+st.bar_chart(dfg, width = 500, height = 500)
