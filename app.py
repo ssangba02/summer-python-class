@@ -59,7 +59,8 @@ st.bar_chart(dfg, width = 500, height = 500)
 
 option = st.selectbox(
      '영화를 선택하세요',
-     ('영화명'))
+     df['영화명'])
 
 st.write('You selected:', option)
-Copy
+df2 = df[df['영화명']] == option
+st.dataframe(df2)
