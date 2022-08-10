@@ -50,3 +50,4 @@ df.columns = ['번호', '영화명', '평점', '리뷰', '아이디', '작성일
 
 st.title('네이버 영화평')
 st.dataframe(df)
+st.table(df)
